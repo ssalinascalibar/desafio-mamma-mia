@@ -1,0 +1,12 @@
+.card{
+    margin: 1rem 0;
+}
+
+.buttons-card-pizza{
+    display: flex;
+    justify-content: space-between;
+}
+
+h3{
+    margin: 1rem 0;
+}

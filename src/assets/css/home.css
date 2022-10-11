@@ -1,0 +1,24 @@
+/* card */
+.card{
+    margin: 1rem 0;
+}
+
+/* card footer */
+.card-footer{
+    text-align: center;
+}
+
+.card-footer h2{
+    margin: 2rem 0 0 0;
+}
+
+.buttons-card{
+    display: flex;
+    justify-content: center;
+}
+
+.buttons-card button{
+    color: #fff;
+    margin: 1rem 0.5rem;
+    padding: 0.3rem 1.5rem;
+}

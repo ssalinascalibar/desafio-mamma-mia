@@ -1,0 +1,22 @@
+header{
+    background-image: url(/src/assets/img/header-bkg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 50vh;
+    text-align: center;
+    color: #fff;
+}
+
+.mask {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+hr{
+    width: 80%;
+}
