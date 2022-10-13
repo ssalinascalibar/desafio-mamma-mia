@@ -13,7 +13,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
 
-  const { pizzas, setPizzas} = useContext(Context);
+  const { pizzas, setPizzas, agregarAlCarro} = useContext(Context);
 
   //useNavigate solo crea la ruta, no la vista
   const navigate = useNavigate();
@@ -43,7 +43,7 @@ export default function Home() {
                   <h2>${pizza.price}</h2>
                   <div className="buttons-card">
                     <button type="button" className="btn btn-info" onClick={() => navigate(`/pizza/${pizza.id}`)}>Ver Más</button>
-                    <button type="button" className="btn btn-danger">Añadir</button>
+                    <button type="button" className="btn btn-danger" onClick={() => agregarAlCarro(pizza)}>Añadir</button>
                   </div>
                 </div>
               </div>    

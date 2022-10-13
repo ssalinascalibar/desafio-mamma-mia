@@ -20,6 +20,8 @@ function App() {
   // Estado para el total
   const [ total, setTotal] = useState(0);
 
+  const [ carrito, setCarrito] = useState([]);
+
   //llamado a la api local
   const getPizzas = async() => {
     const endPoint = "/pizzas.json";
@@ -36,14 +38,25 @@ function App() {
 
   }, []);
 
+  const agregarAlCarro = ({ id, img, name, price }) => {
+    const productoEncontradoIndex = carrito.findIndex((p) => p.id === id);
+    const producto = { id, img, name, price, count: 1 };
 
-
+    if (productoEncontradoIndex >= 0) {
+      carrito[productoEncontradoIndex].count++;
+      setCarrito([...carrito]);
+      console.log(carrito)
+    } else {
+      setCarrito([...carrito, producto]);
+    }
+    
+  };
 
 
   return (
     <div className="App">
       {/* Se dejan disponibles las variables globales mediante Provider */}
-      <Context.Provider value={{ pizzas, setPizzas, total, setTotal }}> 
+      <Context.Provider value={{ pizzas, setPizzas, total, setTotal, carrito, setCarrito, agregarAlCarro }}> 
         <BrowserRouter>
           <NavBar />
           

@@ -1,0 +1,15 @@
+.carrito{
+    background-color: #f6f7f9;
+    margin: 1rem 0;
+    padding: 1.5rem;
+}
+
+.carrito-content{
+    display: flex;
+    align-items: center;
+    padding: 0.7rem 0;
+}
+
+img{
+    width: 15%;
+}
