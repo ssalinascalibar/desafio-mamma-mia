@@ -29,6 +29,7 @@ export default function Carrito() {
                 <hr />
               </div>
             ))}
+            <button type="button" class="btn btn-success">Ir a pagar</button>
           </section>
         
       </div>
