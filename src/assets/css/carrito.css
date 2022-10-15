@@ -16,5 +16,21 @@
 
 .botonera{
     display: flex;
+    align-items: center;
+    margin: 0 0.5rem;
     
 }
+
+.botonera h5{
+    margin: 0 0.3rem;
+}
+
+.pizza-carrito{
+    display: flex;
+    align-items: center;
+}
+
+.pizza-carrito h3{
+    margin: 0 0 0 0.5rem;
+}
+
