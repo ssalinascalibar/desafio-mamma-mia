@@ -13,3 +13,8 @@
 .carrito img{
     width: 15%;
 }
+
+.botonera{
+    display: flex;
+    
+}

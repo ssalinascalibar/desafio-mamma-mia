@@ -17,9 +17,7 @@ function App() {
   // Este estado guarda todos los productos en la variable pìzzas
   const [ pizzas, setPizzas] = useState([]);
   
-  // Estado para el total
-  const [ total, setTotal] = useState(0);
-
+  // Estado para guardar el carrito de compras, que inicia como vacio
   const [ carrito, setCarrito] = useState([]);
 
   //llamado a la api local
@@ -52,11 +50,21 @@ function App() {
     
   };
 
+  const sumarPizza = (i) => {
+    carrito[i].count++;
+    setCarrito([...carrito])
+  }
+  
+  const restarPizza = (i) => {
+    carrito[i].count--;
+    setCarrito([...carrito])
+  }
+
 
   return (
     <div className="App">
       {/* Se dejan disponibles las variables globales mediante Provider */}
-      <Context.Provider value={{ pizzas, setPizzas, total, setTotal, carrito, setCarrito, agregarAlCarro }}> 
+      <Context.Provider value={{ pizzas, setPizzas, carrito, setCarrito, agregarAlCarro, sumarPizza, restarPizza }}> 
         <BrowserRouter>
           <NavBar />
           

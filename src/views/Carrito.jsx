@@ -5,9 +5,10 @@ import Context from '../Context'
 import carrito from '../assets/css/carrito.css';
 
 export default function Carrito() {
-
-  const { carrito, setCarrito, agregarAlCarro} = useContext(Context);
+  
+  const { carrito, setCarrito, agregarAlCarro, sumarPizza, restarPizza} = useContext(Context);
   console.log(carrito)
+  
   
   return (
     <div>
@@ -23,13 +24,18 @@ export default function Carrito() {
                     {c.name}
                   </div>
                   <div className="col-md-6">
-                    ${c.price}
+                    <div className="botonera" key={i}>
+                      <h5>${c.price}</h5>
+                      <button type="button" className="btn btn-danger" onClick={() => restarPizza(i)}> - </button>
+                      <h5>{c.count}</h5>
+                      <button type="button" className="btn btn-primary" onClick={() => sumarPizza(i)}> + </button>
+                    </div>
                   </div>
                 </div>
                 <hr />
               </div>
             ))}
-            <button type="button" class="btn btn-success">Ir a pagar</button>
+            <button type="button" className="btn btn-success">Ir a pagar</button>
           </section>
         
       </div>
