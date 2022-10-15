@@ -15,7 +15,7 @@ import { useParams } from 'react-router-dom'
 
 export default function Pizza() {
 
-  const { pizzas } = useContext(Context);
+  const { pizzas, agregarAlCarro } = useContext(Context);
 
   // trae el parametro id que se pasa mediante la url de navigate
   const { id } = useParams();
@@ -48,7 +48,7 @@ export default function Pizza() {
                 </ul>
                 <div className="buttons-card-pizza">
                     <h2>${pizzaDetail.price}</h2>
-                    <button type="button" className="btn btn-danger">Añadir</button>
+                    <button type="button" className="btn btn-danger" onClick={() => agregarAlCarro(pizzaDetail)}>Añadir</button>
                 </div>
               </div>
             </div>
