@@ -36,16 +36,17 @@ function App() {
 
   }, []);
 
+  // id, img, name, price, es destructuración de los datos (data) que es todo el array de pizzas
   const agregarAlCarro = ({ id, img, name, price }) => {
-    const productoEncontradoIndex = carrito.findIndex((p) => p.id === id);
-    const producto = { id, img, name, price, count: 1 };
+    const findPizza = carrito.findIndex((p) => p.id === id);
+    const pizza = { id, img, name, price, count: 1 };
 
-    if (productoEncontradoIndex >= 0) {
-      carrito[productoEncontradoIndex].count++;
+    if (findPizza >= 0) {
+      carrito[findPizza].count++;
       setCarrito([...carrito]);
       console.log(carrito)
     } else {
-      setCarrito([...carrito, producto]);
+      setCarrito([...carrito, pizza]);
     }
     
   };

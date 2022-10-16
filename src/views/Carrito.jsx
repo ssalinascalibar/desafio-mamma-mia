@@ -4,10 +4,12 @@ import Context from '../Context'
 //css
 import carrito from '../assets/css/carrito.css';
 
-export default function Carrito() {
+export default function Carrito(totalCar) {
   
   const { carrito, setCarrito, agregarAlCarro, sumarPizza, restarPizza} = useContext(Context);
   console.log(carrito)
+
+  const totalCarrito = carrito.reduce((previusValue, {count, price}) => previusValue + (price * count), 0);
   
   
   return (
@@ -37,6 +39,7 @@ export default function Carrito() {
                 <hr />
               </div>
             ))}
+            <h2>Total ${totalCarrito}</h2>
             <button type="button" className="btn btn-success">Ir a pagar</button>
           </section>
         

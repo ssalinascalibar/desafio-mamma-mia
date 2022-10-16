@@ -48,7 +48,7 @@ export default function Pizza() {
                 </ul>
                 <div className="buttons-card-pizza">
                     <h2>${pizzaDetail.price}</h2>
-                    <button type="button" className="btn btn-danger" onClick={() => agregarAlCarro(pizzaDetail)}>Añadir</button>
+                    <button type="button" className="btn btn-danger" onClick={() => agregarAlCarro(pizzaDetail)}>Añadir 🛒</button>
                 </div>
               </div>
             </div>
