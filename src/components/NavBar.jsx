@@ -14,12 +14,10 @@ export default function NavBar() {
   console.log(totalCarrito);
 
   return (
-    <nav>
+    <nav className="navbar fixed-top">
       <div className="container">
-        <div className="links">
-          <Link to="/" className="link"><h3>🍕 Pizzería Mamma Mia!</h3></Link>
-          <Link to="/carrito" className="link"><span className="total">🛒 Total: ${totalCarrito}</span></Link>
-        </div>
+        <Link to="/" className="link"><h3>🍕 Pizzería Mamma Mia!</h3></Link>
+        <Link to="/carrito" className="link"><span className="total">🛒 Total: ${totalCarrito}</span></Link> 
       </div>
     </nav>
   )

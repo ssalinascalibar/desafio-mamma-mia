@@ -4,11 +4,11 @@ nav{
     padding: 0.5rem 0;
 }
 
-.links{
+/* .links{
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+} */
 
 .link{
     color: #fff;
@@ -18,3 +18,5 @@ nav{
 .total{
     font-size: 1.5em;
 }
+
+
