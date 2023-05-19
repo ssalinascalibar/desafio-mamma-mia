@@ -7,6 +7,7 @@ header{
     height: 50vh;
     text-align: center;
     color: #fff;
+    margin: 4rem 0 0 0;
 }
 
 .mask {
@@ -19,4 +20,11 @@ header{
 
 .hr{
     width: 50%;
+}
+
+@media screen and (min-width: 992px) {
+    header{
+        margin: 5rem 0 0 0;
+    }
+    
 }
