@@ -1,7 +1,10 @@
 nav{
     background-color: #1b91ac;
     color: #fff;
-    padding: 0.5rem 0;
+}
+
+.navbar{
+    padding: 1rem 0;
 }
 
 /* .links{

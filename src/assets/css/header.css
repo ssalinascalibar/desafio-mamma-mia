@@ -18,6 +18,10 @@ header{
     justify-content: center;
 }
 
+.mask h1{
+    padding: 4rem 0 0 0;
+}
+
 .hr{
     width: 50%;
 }
