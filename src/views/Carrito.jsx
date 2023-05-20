@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import Context from '../Context'
 
 //css
-import carrito from '../assets/css/carrito.css';
+import '../assets/css/carrito.css';
 
 export default function Carrito(totalCar) {
   
