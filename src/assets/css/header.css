@@ -4,7 +4,7 @@ header{
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     background-size: cover;
-    height: 50vh;
+    height: 60vh;
     text-align: center;
     color: #fff;
     margin: 4rem 0 0 0;
@@ -12,7 +12,7 @@ header{
 
 .mask {
     background-color: rgba(0, 0, 0, 0.6);
-    height: 50vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,6 +29,11 @@ header{
 @media screen and (min-width: 992px) {
     header{
         margin: 5rem 0 0 0;
+        height: 50vh;
+    }
+
+    .mask {
+        height: 50vh; 
     }
     
 }
