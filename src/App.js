@@ -19,6 +19,7 @@ function App() {
   
   // Estado para guardar el carrito de compras, que inicia como vacio
   const [ carrito, setCarrito] = useState([]);
+  console.log(carrito)
 
   //llamado a la api local
   const getPizzas = async() => {
@@ -57,9 +58,17 @@ function App() {
   }
   
   const restarPizza = (i) => {
+    console.log(i)
+    if (carrito[i].count < 1){
+      alert('Has eliminado esta pizza')
+      setCarrito(carrito.filter((c) => {
+        return c.count !== 0
+      })) 
+    } else {
     carrito[i].count--;
     setCarrito([...carrito])
-  }
+    }
+  };
 
 
   return (
