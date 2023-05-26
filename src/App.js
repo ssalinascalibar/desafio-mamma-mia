@@ -40,6 +40,7 @@ function App() {
   // id, img, name, price, es destructuración de los datos (data) que es todo el array de pizzas
   const agregarAlCarro = ({ id, img, name, price }) => {
     const findPizza = carrito.findIndex((p) => p.id === id);
+    console.log(carrito[findPizza])
     const pizza = { id, img, name, price, count: 1 };
 
     if (findPizza >= 0) {
@@ -60,7 +61,7 @@ function App() {
   const restarPizza = (i) => {
     console.log(i)
     if (carrito[i].count < 1){
-      alert('Has eliminado esta pizza')
+      alert('¡Has eliminado esta pizza!')
       setCarrito(carrito.filter((c) => {
         return c.count !== 0
       })) 
