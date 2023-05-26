@@ -30,6 +30,7 @@ export default function Pizza() {
   return (
     <div>
       <div className="container">
+        <section className="pizzaDetail">
         <div className="card">
           <div className="row">
             <div className="col-md-7">
@@ -54,6 +55,7 @@ export default function Pizza() {
             </div>
           </div>
         </div>
+        </section>
       </div>
     </div>
   )
